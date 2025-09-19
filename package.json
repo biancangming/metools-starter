@@ -1,0 +1,44 @@
+{
+  "name": "metools-app-starter",
+  "version": "1.0.0",
+  "description": "metools工具（迷途工具箱）插件开发脚手架，支持playground在线调试",
+  "author": "Jiawei",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/validate-component.js && tsdown build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "validate": "node scripts/validate-component.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/runtime-core": "^3.5.21",
+    "@vue/runtime-dom": "^3.5.21",
+    "tsdown": "^0.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^6.3.6",
+    "vue": "^3.5.21",
+    "vue-tsc": "^2.0.0"
+  },
+  "keywords": [
+    "vue3",
+    "component",
+    "metools",
+    "plugin"
+  ]
+}
