@@ -1,29 +1,23 @@
-// @ts-check
-
 import { defineConfig } from 'tsdown'
 
-export default defineConfig({
-  entry: ['src/index.ts'],
-  format: ['esm'],
-  outDir: 'dist',
-  clean: true,
-  // @ts-ignore
-  dts: true,
-  sourcemap: true,
-  minify: false,
-  splitting: false,
-  treeshake: true,
-  define: {
-    __DEV__: 'false',
-    __PROD__: 'true'
+export default defineConfig([
+  {
+    entry: ['./src/index.ts'],
+    platform: 'neutral',
+    fromVite: true,
+    dts: {
+      vue: true,
+    },
+    // minify: true,
+    external: ['naive-ui', '@vueuse/core', 'axios'],
+    outputOptions: {
+      // exports: 'named',
+      assetFileNames: 'index.css',
+      minify: {
+        mangle: true,
+        compress: true,
+        removeWhitespace: true,
+      },
+    },
   },
-  // 添加组件名称验证
-  plugins: [
-    {
-      name: 'validate-component',
-      buildStart() {
-        console.log('正在验证组件是否符合规范...')
-      }
-    }
-  ]
-})
+])

@@ -4,11 +4,14 @@
     <p>{{ info.description }}</p>
     <div class="author">作者: {{ info.author }}</div>
     <div class="version">版本: {{ info.version }}</div>
+    
+    <!-- 添加测试组件 -->
+    <TestNaive />
   </div>
 </template>
 
 <script setup lang="ts">
-import { info } from './index'
+import TestNaive from '../playground/src/TestNaive.vue'
 
 // 定义 info 对象的类型
 interface Info {
@@ -21,7 +24,14 @@ interface Info {
 }
 
 // 为 info 对象指定类型
-const typedInfo: Info = info
+const info: Info =  {
+  "version": "1.0.0",
+  "name": "metools-app-example",
+  "enName": "metools-app-example",
+  "description": "metools-app-example",
+  "author": "metools",
+  "icon": "https://cdn.jsdelivr.net/gh/metools/metools-app-example@latest/icon.png"
+}
 
 // 组件逻辑可以在这里添加
 </script>
