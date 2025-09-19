@@ -6,7 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const { EffectScope, computed, createApp, customRef, defineAsyncComponent, defineComponent, effectScope, getCurrentInstance, getCurrentScope, getCurrentWatcher, h, inject, isProxy, isReactive, isReadonly, isRef, isShallow, markRaw, nextTick, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onScopeDispose, onServerPrefetch, onUnmounted, onUpdated, onWatcherCleanup, provide, reactive, readonly, ref, resolveComponent, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, toValue, triggerRef, unref, useAttrs, useCssModule, useCssVars, useId, useModel, useSlots, useTemplateRef, watch, watchEffect, watchPostEffect, watchSyncEffect }: typeof import('vue')
+
 }
 // for type re-export
 declare global {

@@ -4,14 +4,10 @@
     <p>{{ info.description }}</p>
     <div class="author">作者: {{ info.author }}</div>
     <div class="version">版本: {{ info.version }}</div>
-    
-    <!-- 添加测试组件 -->
-    <TestNaive />
   </div>
 </template>
 
 <script setup lang="ts">
-import TestNaive from '../playground/src/TestNaive.vue'
 
 // 定义 info 对象的类型
 interface Info {

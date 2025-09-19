@@ -8,8 +8,7 @@ export default defineConfig([
     dts: {
       vue: true,
     },
-    // minify: true,
-    external: ['naive-ui', '@vueuse/core', 'axios'],
+    minify: true,
     outputOptions: {
       // exports: 'named',
       assetFileNames: 'index.css',
