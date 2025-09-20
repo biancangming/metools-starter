@@ -60,6 +60,17 @@ npm run build
 npm run preview
 ```
 
+## GitHub部署与模板项目设置
+
+本项目支持部署到GitHub并设置为模板仓库，方便其他开发者快速创建基于此脚手架的新项目。
+
+详细部署指南请参考 [GITHUB_DEPLOYMENT.md](GITHUB_DEPLOYMENT.md) 文件。
+
+您也可以通过以下命令获取部署指导：
+```bash
+npm run deploy:github
+```
+
 ## 插件命名规范
 
 当创建新的插件时，请确保：

@@ -22,7 +22,8 @@
     "build": "node scripts/validate-component.js && tsdown && node scripts/build-tailwind.js && node scripts/merge-css.js",
     "preview": "vite preview",
     "type-check": "tsc --noEmit",
-    "validate": "node scripts/validate-component.js"
+    "validate": "node scripts/validate-component.js",
+    "deploy:github": "node scripts/deploy-github.js"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
