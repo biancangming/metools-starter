@@ -1,6 +1,10 @@
-# 使用说明
 
-## 创建新插件
+## 全局约定
+
+1. playground 文件夹是预览文件夹，不做任何修改
+2. src 文件夹是项目代码文件夹，所有代码都在这个文件夹下
+
+## 插件命名规范
 
 1. 复制 `src/metools-app-example.vue` 并重命名为符合规范的名称：
    ```bash
@@ -12,16 +16,17 @@
 3. 更新 `src/index.ts` 中的导出信息：
    ```typescript
    export const info = {
-       version: "1.0.0", // 版本号
+       version: "1.0.0", // 版本号，始终从 package.json 中的 version 字段获取
        name: "你的插件名称", // 中文名称
-       enName: "YourPlugin", // 英文名称
+       enName: "yourplugin", // 英文名称，始终从 package.json 中的 name 字段获取
        description: "你的插件描述", // 描述，不少于10个字符
        author: "Your Name", // 作者
        icon: icon, // 插件图标
    }
 
    // 导出 Vue3 组件
-   export { default as default } from './metools-app-yourplugin.vue'
+   import app from './metools-app-yourplugin.vue'
+   export default app
    ```
 
 ## 开发调试

@@ -12,6 +12,13 @@ metools 工具（迷途工具箱）插件开发脚手架，支持在线调试和
 
 "一个橙子"维护着个人技术网站 [yigechengzi.com](https://yigechengzi.com/)，分享软件开发经验和技术文章，提供 HOWUSE 前端组件库和橙汁云函数等实用工具。
 
+如果您觉得该项目还不错，可以扫一下二维码捐赠。
+
+![二维码](捐赠.png)
+
+如果觉得一般般，扫码关注下我的公众号
+![二维码](%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
+
 ## 技术选型
 
 1. 打包工具采用 tsdown: https://tsdown.dev/zh-CN/guide/getting-started
