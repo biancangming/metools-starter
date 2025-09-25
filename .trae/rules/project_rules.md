@@ -15,18 +15,24 @@
 
 3. 更新 `src/index.ts` 中的导出信息：
    ```typescript
-   export const info = {
-       version: "1.0.0", // 版本号，始终从 package.json 中的 version 字段获取
-       name: "你的插件名称", // 中文名称
-       enName: "yourplugin", // 英文名称，始终从 package.json 中的 name 字段获取
-       description: "你的插件描述", // 描述，不少于10个字符
-       author: "Your Name", // 作者
-       icon: icon, // 插件图标
+   import icon from './icon'
+   import app from './app.vue'
+   import pkg from '../package.json'
+
+   const info = {
+       version: pkg.version, // 版本号，引入package.json的version
+       name: '你的插件名称', // 中文名称，必须修改
+       enName: pkg.name, // 英文名称，必须修改
+       description: pkg.description, // 描述，不少于10个字符。打包时引入package.json的description
+       author: pkg.author, // 作者，引入package.json的author
+       icon: icon, // 应用图标，必须存在
    }
 
    // 导出 Vue3 组件
-   import app from './metools-app-yourplugin.vue'
-   export default app
+   export default {
+       entry: app,
+       ...info,
+   }
    ```
 
 ## 开发调试

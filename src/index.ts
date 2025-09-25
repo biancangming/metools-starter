@@ -11,4 +11,7 @@ export const info = {
 }
 
 // 导出 Vue3 组件
-export default app
+export default {
+    ...info,
+    entry: app,
+}
