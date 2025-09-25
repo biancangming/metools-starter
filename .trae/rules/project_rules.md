@@ -1,8 +1,7 @@
 
 ## 全局约定
 
-1. playground 文件夹是预览文件夹，不做任何修改
-2. src 文件夹是项目代码文件夹，所有代码都在这个文件夹下
+1. src 文件夹是项目代码文件夹，所有代码都在这个文件夹下
 
 ## 插件命名规范
 
@@ -12,28 +11,6 @@
    ```
 
 2. 修改新插件的代码以实现所需功能
-
-3. 更新 `src/index.ts` 中的导出信息：
-   ```typescript
-   import icon from './icon'
-   import app from './app.vue'
-   import pkg from '../package.json'
-
-   const info = {
-       version: pkg.version, // 版本号，引入package.json的version
-       name: '你的插件名称', // 中文名称，必须修改
-       enName: pkg.name, // 英文名称，必须修改
-       description: pkg.description, // 描述，不少于10个字符。打包时引入package.json的description
-       author: pkg.author, // 作者，引入package.json的author
-       icon: icon, // 应用图标，必须存在
-   }
-
-   // 导出 Vue3 组件
-   export default {
-       entry: app,
-       ...info,
-   }
-   ```
 
 ## 开发调试
 
