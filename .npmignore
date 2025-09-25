@@ -7,7 +7,6 @@ coverage/
 .vscode/
 *.log
 *.lock
-dist/
 build/
 temp/
 tmp/

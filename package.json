@@ -6,11 +6,19 @@
   "author": "Jiawei",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist",
+    "*.png",
+    "*.jpg",
+    "*.svg",
+    "src"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "validate": "node scripts/validate-package.js"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
